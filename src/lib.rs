@@ -13,7 +13,6 @@ pub fn run() {
             if let Some(code) = code.as_str() {
                 if let Some(token) = get_access(code) {
                     if let Some(user) = get_user(&token) {
-                        println!("{:?}", user);
                         let record = serde_json::json!({
                             "Status": "Done",
                             "Name": "BBB"
