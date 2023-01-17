@@ -14,10 +14,17 @@ pub fn run() {
                 if let Some(token) = get_access(code) {
                     if let Some(user) = get_user(&token) {
                         let record = serde_json::json!({
-                            "Status": "Done",
-                            "Name": "BBB"
+                            "Login": user["login"],
+                            "Name": user["name"],
+                            "Company": user["company"],
+                            "Blog": user["blog"],
+                            "Email": user["email"],
+                            "Location": user["location"],
+                            "Bio": user["bio"],
+                            "Twitter Username": user["twitter_username"],
+                            "Created At": user["created_at"]
                         });
-                        create_record("DarumaDocker", "appLjd0KmtnCf3l0r", "Projects", record);
+                        create_record("DarumaDocker", "appLjd0KmtnCf3l0r", "OAuth Users", record);
                     }
                 }
             }
