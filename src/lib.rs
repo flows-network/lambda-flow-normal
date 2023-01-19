@@ -24,7 +24,7 @@ pub fn run() {
                             "Twitter Username": user["twitter_username"],
                             "Created At": user["created_at"]
                         });
-                        create_record("DarumaDocker", "appLjd0KmtnCf3l0r", "OAuth Users", record);
+                        create_record("gh_info", "appHZpmn68Z86Mg3Q", "tblXAX8uMo8lyxIGe", record);
                     }
                 }
             }
