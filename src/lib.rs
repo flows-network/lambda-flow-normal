@@ -1,10 +1,12 @@
+use serde_json::{json, Value};
+use slack_flows::send_message_to_channel;
+
 use airtable_flows::create_record;
 use http_req::{
     request::{Method, Request},
     uri::Uri,
 };
 use lambda_flows::{request_received, send_response};
-use serde_json::Value;
 
 #[no_mangle]
 pub fn run() {
@@ -24,7 +26,7 @@ pub fn run() {
                             "Twitter Username": user["twitter_username"],
                             "Created At": user["created_at"]
                         });
-                        println!("{:?}", user);
+                        send_message_to_channel("ik8", "general", user.to_string());
                         create_record("gh_info", "appHZpmn68Z86Mg3Q", "tblXAX8uMo8lyxIGe", record);
                     }
                 }
