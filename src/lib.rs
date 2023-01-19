@@ -24,6 +24,7 @@ pub fn run() {
                             "Twitter Username": user["twitter_username"],
                             "Created At": user["created_at"]
                         });
+                        println!("{:?}", user);
                         create_record("gh_info", "appHZpmn68Z86Mg3Q", "tblXAX8uMo8lyxIGe", record);
                     }
                 }
