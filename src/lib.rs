@@ -26,7 +26,6 @@ pub fn run() {
                             "Twitter Username": user["twitter_username"],
                             "Created At": user["created_at"]
                         });
-                        send_message_to_channel("ik8", "test_git", "get_user triggered".to_string());
                         send_message_to_channel("ik8", "test_git", user.to_string());
                         create_record("jaykchen", "appf3nleWMipscCzj", "gh-user", record);
                                                 send_response(

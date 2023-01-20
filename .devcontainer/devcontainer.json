@@ -1,0 +1,7 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/rust:latest",
+	"features": {
+		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/rust-wasi:0": {},
+		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/wasmtime-wasi:0": {}
+	}
+}
