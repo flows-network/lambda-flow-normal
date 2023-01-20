@@ -29,6 +29,11 @@ pub fn run() {
                         send_message_to_channel("ik8", "test_git", "get_user triggered".to_string());
                         send_message_to_channel("ik8", "test_git", user.to_string());
                         create_record("jaykchen", "appf3nleWMipscCzj", "gh-user", record);
+                                                send_response(
+                            200,
+                            vec![(String::from("content-type"), String::from("text/html"))],
+                            user.to_string().as_bytes().to_vec(),
+                        );
                     }
                 }
             }
@@ -36,7 +41,7 @@ pub fn run() {
         send_response(
             200,
             vec![(String::from("content-type"), String::from("text/html"))],
-            user.as_bytes().to_vec(),
+            "ok".as_bytes().to_vec(),
         );
     }
 }
