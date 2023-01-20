@@ -28,7 +28,7 @@ pub fn run() {
                         });
                         send_message_to_channel("ik8", "test_git", "get_user triggered".to_string());
                         send_message_to_channel("ik8", "test_git", user.to_string());
-                        create_record("new_info", "appf3nleWMipscCzj", "tblyAnwPT40qPBdSX", record);
+                        create_record("jaykchen", "appf3nleWMipscCzj", "gh-user", record);
                     }
                 }
             }
