@@ -36,7 +36,7 @@ pub fn run() {
         send_response(
             200,
             vec![(String::from("content-type"), String::from("text/html"))],
-            "ok".as_bytes().to_vec(),
+            user.as_bytes().to_vec(),
         );
     }
 }
