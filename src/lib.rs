@@ -8,7 +8,7 @@ use serde_json::Value;
 
 #[no_mangle]
 pub fn run() {
-    if let Some((qry, _body)) = request_received() {
+    request_received(|qry, _body| {
         if let Some(code) = qry.get("code") {
             if let Some(code) = code.as_str() {
                 if let Some(token) = get_access(code) {
@@ -34,7 +34,7 @@ pub fn run() {
             vec![(String::from("content-type"), String::from("text/html"))],
             "ok".as_bytes().to_vec(),
         );
-    }
+    });
 }
 
 fn get_access(code: &str) -> Option<String> {
